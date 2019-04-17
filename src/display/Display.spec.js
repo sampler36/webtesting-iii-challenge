@@ -11,4 +11,9 @@ describe('<Display />', () => {
     expect(queryByText('Locked')).toBeFalsy();
     expect(queryByText('Open')).toBeTruthy();
   })
+it('should render close and locked display', () => {
+      const { getByText, queryByText }= render(<Display closed={true} locked={true} />);
+      expect(queryByText('Closed')).toBeTruthy();
+      expect(queryByText('Locked')).toBeTruthy();
+});
 })
