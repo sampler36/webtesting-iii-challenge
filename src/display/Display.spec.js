@@ -17,7 +17,7 @@ it('should render close and locked display', () => {
       expect(queryByText('Locked')).toBeTruthy();
 })
 it('should update display the right class ie color when an event is triggered', () => {
-    const { getByText, queryByText } = render(<Display closed={false} locked={false} />)
-    expect(getByText('green-led')).toBe(true);
+    const { getByText, queryByText } = render(<Display open={true}/>)
+    expect(getByText('Open')).toHaveClass('led green-led');
   })
  })
